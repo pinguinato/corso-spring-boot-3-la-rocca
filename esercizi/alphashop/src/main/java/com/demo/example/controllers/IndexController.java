@@ -15,4 +15,11 @@ public class IndexController {
 		model.addAttribute("saluti", saluti);
 		return "index";
 	}
+	
+	@GetMapping(value = "/index")
+	public String getWelcome2(Model model) {
+		model.addAttribute("intestazione", "Benvenuti nella index page della webapp Alphashop");
+		model.addAttribute("saluti", saluti);
+		return "index";
+	}
 }
