@@ -35,14 +35,10 @@
   			</div>
 		</nav>
 	
-		<h1>${advertising}</h1>
+		<h1>Benvenuti in Alfashop</h1>
+		<h3>Saluti ${name}, questi sono gli articoli disponibili.</h3>
 		
 		
-		<form method="post">
-  			Name: <input type="text" name="name">
-  			Password: <input type="password" name="password">
-  			<input type="submit">
-		</form>
 		
 		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

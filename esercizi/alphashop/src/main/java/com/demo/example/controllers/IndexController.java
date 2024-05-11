@@ -14,6 +14,7 @@ public class IndexController {
 	public String getWelcome(Model model) {
 		model.addAttribute("intestazione", "Benvenuti nella root page della webapp Alphashop");
 		model.addAttribute("saluti", saluti);
+		
 		return "index";
 	}
 	
@@ -21,6 +22,7 @@ public class IndexController {
 	public String getWelcome2(Model model, @RequestParam("name") String name) {
 		model.addAttribute("intestazione", String.format("Benvenuto %s nella index page della webapp Alphashop", name));
 		model.addAttribute("saluti", saluti);
+		
 		return "index";
 	}
 }
