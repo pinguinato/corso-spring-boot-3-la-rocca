@@ -17,6 +17,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<lombok.version>1.18.32</lombok.version>
+		<devtools.version>3.3.0</devtools.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -42,6 +43,25 @@
     		<artifactId>lombok</artifactId>
     		<version>${lombok.version}</version>
     		<scope>provided</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/glassfish-jstl -->
+		<dependency>
+    		<groupId>org.eclipse.jetty</groupId>
+    		<artifactId>glassfish-jstl</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl -->
+		<dependency>
+    		<groupId>org.glassfish.web</groupId>
+    		<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-devtools</artifactId>
+    		<version>${devtools.version}</version>
 		</dependency>
 
 

@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -38,7 +40,30 @@
 		<h1>Benvenuti in Alfashop</h1>
 		<h3>Saluti ${name}, questi sono gli articoli disponibili.</h3>
 		
-		
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Codice</th>
+					<th>Descrizione</th>
+					<th>UM</th>
+					<th>Pezzi</th>
+					<th>Peso</th>
+					<th>Prezzo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${articoli}" var="article">
+					<tr>
+						<td>${article.codArt}</td>
+						<td>${article.descrizione}</td>
+						<td>${article.um}</td>
+						<td>${article.pzcart}</td>
+						<td>${article.pesonetto}</td>
+						<td>${article.prezzo}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
 		
 		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
