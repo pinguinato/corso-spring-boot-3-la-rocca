@@ -1,28 +1,37 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Required meta tags -->
-    	<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    	<!-- Bootstrap CSS -->
-		<link href="<c:url value="/static/css/bootstrap.min.css" />" rel="stylesheet">
-		<title>Alfashop</title>
-	</head>
+	<%@ include file="common/head.jspf" %>
 	<body>
-	
 		<%@ include file="common/navbar.jspf" %>
-	
-		<h1>${advertising}</h1>
-		
-		
-		<form method="post">
-  			Name: <input type="text" name="name">
-  			Password: <input type="password" name="password">
-  			<input type="submit">
-		</form>
-		
-		
-		<script src="<c:url value="/static/js/bootstrap.bundle.min.js" />"></script>
+		<%@ include file="common/jumbotron.jspf" %>
+		<!-- Form Login -->
+	<div class="container login-container">
+	  <div class="row">
+	      <div class="col-md-6 login-form">
+	          <h3>Login Form</h3>  
+	          <form method="post">
+		          <div class="form-group">
+		              <input type="text" class="form-control" name="name" id="name" placeholder="Nome Utente">
+		          </div>
+		          <div class="form-group">
+		              <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+		          </div>
+		          <div class="form-group">
+		               <input class="btnSubmit" type="submit">
+		          </div>
+		          <div class="form-group">
+		               <a href="#" class="ForgetPwd">Password Dimenticata?</a>
+		          </div>
+		           <c:if test="${param.error != null}">
+		                <div class="alert alert-danger">
+		                    <p>${errmsg}</p>
+		                </div>
+		            </c:if>   
+	           </form>
+	      </div>
+	  </div>
+	</div>
+		<%@ include file="common/foot.jspf" %>
 	</body>
 </html>
