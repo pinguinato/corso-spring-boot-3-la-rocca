@@ -3,6 +3,8 @@ package com.demo.example.entities;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -15,4 +17,8 @@ public class Barcode {
 	
 	@Column(name = "idtipoart")
 	private String idTipoArt;
+	
+	@ManyToOne
+	@JoinColumn(name = "codart", referencedColumnName = "codArt")
+	private Articoli articolo;
 }
