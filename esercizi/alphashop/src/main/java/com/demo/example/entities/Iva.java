@@ -1,8 +1,13 @@
 package com.demo.example.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity	
@@ -17,4 +22,7 @@ public class Iva {
 	
 	@Column(name = "aliquota")
 	private Integer aliquota;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy ="iva")
+	private Set<Articoli> articoli = new HashSet<>(); 
 }
